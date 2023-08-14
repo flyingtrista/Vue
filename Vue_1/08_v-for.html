@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <ul v-for="item,index in dataArray">
+            <li> 索引 {{index}} : 第 {{item.no}} 位 {{item.name}} 今年 {{item.age}} 歲~</li>
+        </ul>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    dataArray: [{
+                        no: 1,
+                        name: 'Dora',
+                        age: 3
+                    }, {
+                        no: 2,
+                        name: 'Andy',
+                        age: 30
+                    }, {
+                        no: 3,
+                        name: 'Dann',
+                        age: 40
+                    }]
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

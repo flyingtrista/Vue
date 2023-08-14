@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <label for="">v-bind:value</label> 
+            <input v-bind:value="inputVal" type="text">
+        </div>
+        <div>
+            <label for="">:value</label>
+            <input :value="inputVal" type="text">
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    inputVal: 'BuildSchool'
+                }
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+
+</html>
